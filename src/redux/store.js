@@ -1,13 +1,27 @@
-// createContext() 
-import {createStore} from 'redux';
+
+import {createStore, combineReducers} from 'redux';
 import counterReducer from './reducer/counterReducer.js';
+import todoReducer from './reducer/todoReducer.js';
+
+const rootReducer = combineReducers({
+       counter: counterReducer,
+       todo: todoReducer,
+})
 
 
-// console.log("helllo from store.js")
 
-const store = createStore(counterReducer)
+
+const store = createStore(rootReducer)
 
 export default store
+
+
+
+
+
+
+
+
 
 
 // counterReducer()

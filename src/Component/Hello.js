@@ -4,7 +4,7 @@ import {increase, decrease, reset} from "../redux/actions/counterActions"
 
 const Hello = () => {
 
-    const {count} = useSelector(state=>state); // {count: 0}
+    const count =  useSelector(state=>state.counter.count); 
 
     const dispatch = useDispatch();
 
